@@ -10,6 +10,16 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OccurrenceOrderPlugin = webpack.optimize.OccurrenceOrderPlugin;
 
+let data = {
+    title: process.env.SITE_TITLE ? process.env.SITE_TITLE : "Angular Finland"
+};
+if (process.env.GOOGLE_ANALYTICS_TRACKING_ID) {
+    data.googleAnalytics = {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        pageViewOnLoad: (process.env.GOOGLE_ANALYTICS_PAGE_VIEW_ON_LOAD && process.env.GOOGLE_ANALYTICS_PAGE_VIEW_ON_LOAD !== 'false') ? true : false
+    }
+}
+
 module.exports = {
     target: 'web',
     cache: true,
@@ -26,7 +36,10 @@ module.exports = {
             },
             {
                 test: /\.pug$/,
-                loader: 'pug-html-loader'
+                loader: 'pug-html-loader',
+                query: {
+                    data: data
+                }
             },
             {
                 test: /\.styl$/,
