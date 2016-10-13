@@ -1,0 +1,37 @@
+@import '../../../../styles/globals/variables'
+@import '../../../../styles/globals/mixins'
+
+:host
+    display block
+    background-color white
+    margin 0.5em
+    padding 0
+
+.icon
+    display inline-block
+    vertical-align top
+    width 2em
+    height 2em
+    margin 0.5em
+    background-image url("/assets/images/twitter-bird-blue.svg")
+    background-size 2em 2em
+    background-position top left
+    background-repeat no-repeat
+
+.from
+    display inline-block
+    vertical-align top
+    width calc(100% - 4em)
+    margin 0.5em 0.5em 0.5em 0em
+
+.message
+    padding 0.5em
+
+.image
+    img
+        width 100%
+        height auto
+
+a
+    text-decoration none
+    font-weight bold

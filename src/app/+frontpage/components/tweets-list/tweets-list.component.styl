@@ -1,0 +1,26 @@
+@import '../../../../styles/globals/variables'
+@import '../../../../styles/globals/mixins'
+
+:host
+    display block
+    background-color green
+    padding 0.5em
+
+.brick
+    +for_breakpoint(mobile)
+        width 100%
+        
+    +for_breakpoint(tablet)
+        width 50%
+
+    +for_breakpoint(desktop)
+        width 33.333333%
+        
+.loading
+    width 128px
+    height 16px
+    margin 0 auto
+    background-image url("/assets/images/loader.gif")
+    background-size 128px 16px
+    background-repeat no-repeat
+    background-position top left

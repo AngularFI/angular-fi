@@ -1,0 +1,37 @@
+@import '../../styles/globals/variables'
+@import '../../styles/globals/mixins'
+
+:host
+    display block
+    
+.tweet-button
+    margin 1em 0
+    a
+        color white
+        background-color #1b95e0
+        border-radius 0.5em
+        padding 0.75em
+        transition background-color .2s ease-out
+
+        &:hover
+            background-color green
+
+        .bird
+            display inline-block
+            vertical-align middle
+            width 1.5em
+            height 1.5em
+            background-image url("/assets/images/twitter-bird-white.svg")
+            background-size 1.5em 1.5em
+            background-position top left
+            background-repeat no-repeat
+
+        .label
+            margin-left 0.5em
+            padding-bottom 0.1em
+            display inline-block
+            vertical-align middle
+            text-decoration none
+            
+        +for_breakpoint(mobile)
+            display block

@@ -1,0 +1,9 @@
+.icon
+.from
+    a(href="{{tweet.userLink}}") {{tweet.userName}}
+    |  
+    a(href="https://twitter.com/search?q=%40{{tweet.userScreenName}}") @{{tweet.userScreenName}}
+    .date {{tweet.created | date:'DD.MM.YYYY'}}
+.message([innerHTML]="tweet.message | linkify")
+.image(*ngIf="tweet.image")
+    img(src="{{tweet.image}}", alt="")
