@@ -17,7 +17,6 @@ export class Twitter {
     search(term: string, count: number = 25) {
         return new Promise( (resolve, reject) => {
             const url = this.url + "search/tweets.json?q=+exclude%3Aretweets%20" + encodeURIComponent(term) + "&count=" + count;
-            console.log(url);
             this.redis.get(url, (error: any, reply: string) => {
                 if (reply) {
                     resolve(this.parseData(reply));
