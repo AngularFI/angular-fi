@@ -13,7 +13,7 @@ export class TwitterService {
     constructor(private http: Http) {}
 
     tweets(term: string, count: number = 10): Observable<any> {
-        let url = this.url + "?q=" + encodeURIComponent(term) + "&" + count;
+        let url = this.url + "?q=" + encodeURIComponent(term) + "&count=" + count;
         return this.http.get(url)
             .map(this.extractData)
             .catch(this.handleError);
