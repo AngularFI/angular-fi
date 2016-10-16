@@ -61,6 +61,18 @@ class Server {
     }
 
     private routes(): void {
+        if (process.env.FORCE_HTTPS) {
+            const HTTPS_HOST = process.env.HTTPS_HOST || "https:/www.angular.fi";
+            this.app.get("*", (request: express.Request, response: express.Response, next: any) => {
+                if (request.headers["x-forwarded-proto"] !== "https") {
+                    response.redirect(HTTPS_HOST + request.url)
+                } else {
+                    next();
+                }
+            });
+        }
+
+        // Setpu Express router
         let router: express.Router;
         router = express.Router();
 
@@ -99,7 +111,7 @@ class Server {
 
         //start listening on port
         this.server.on("listening", () => {
-            console.log("==> Listening on port %s. Open up http://localhost:%s/ in your browser.", this.port, this.port);            
+            console.log("==> Listening on port %s. Open up http://localhost:%s/ in your browser.", this.port, this.port);
         });
     }
 }
