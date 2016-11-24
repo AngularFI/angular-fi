@@ -62,7 +62,7 @@ class Server {
 
     private routes(): void {
         if (process.env.FORCE_HTTPS) {
-            const HTTPS_HOST = process.env.HTTPS_HOST || "https:/www.angular.fi";
+            const HTTPS_HOST = process.env.HTTPS_HOST || "https://www.angular.fi";
             this.app.get("*", (request: express.Request, response: express.Response, next: any) => {
                 if (request.headers["x-forwarded-proto"] !== "https") {
                     response.redirect(HTTPS_HOST + request.url)
@@ -72,7 +72,7 @@ class Server {
             });
         }
 
-        // Setpu Express router
+        // Setup Express router
         let router: express.Router;
         router = express.Router();
 
