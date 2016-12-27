@@ -27,6 +27,10 @@ export class LinkifyPipe implements PipeTransform {
         replacePattern3 = /(([a-zA-Z0-9\-\_\.])+@[a-zA-Z\_]+?(\.[a-zA-Z]{2,6})+)/gim;
         replacedText = replacedText.replace(replacePattern3, '<a href="mailto:$1">$1</a>');
 
+        //Twitter hashtags and usertags
+        replacedText = replacedText.replace(/#(\S*)/g,'<a href="https://twitter.com/search?q=%23$1">#$1</a>');
+        replacedText = replacedText.replace(/@(\S*)/g,'<a href="https://twitter.com/search?q=%40$1">@$1</a>');
+
         return replacedText;
      }
 }
