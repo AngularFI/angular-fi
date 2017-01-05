@@ -9,7 +9,7 @@ import { Rest } from "./rest";
 
 declare var process, __dirname, global;
 
-class Server {
+export class Server {
     public app: any;
     private server: any;
     private mongo: any;
@@ -17,10 +17,6 @@ class Server {
     private rest: any;
     private root: string;
     private port: number;
-
-    public static bootstrap(): Server {
-        return new Server();
-    }
 
     constructor() {
         // Create expressjs application
@@ -115,7 +111,3 @@ class Server {
         });
     }
 }
-
-// Bootstrap the server
-let server = Server.bootstrap();
-export = server.app;

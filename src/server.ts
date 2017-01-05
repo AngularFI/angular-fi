@@ -1,2 +1,5 @@
 // Instantiate server app
-let app = require("./server/app");
+import { Server } from "./server/app";
+
+// Bootstrap the server
+let server = new Server();

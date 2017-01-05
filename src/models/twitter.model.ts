@@ -54,7 +54,7 @@ export class Twitter {
         return tweets || [];
     }
 
-    private getAccessToken(): Promise<void> {
+    private getAccessToken(): Promise<any> {
         return new Promise( (resolve, reject) => {
             if (this.accessToken) {
                 resolve()
