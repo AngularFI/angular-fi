@@ -95,27 +95,28 @@ export const clientPlugins = [
     /@angular(\\|\/)upgrade/,
     root('empty.js')
   ),
+
   // problem with platformUniversalDynamic on the server/client
   new NormalModuleReplacementPlugin(
     /@angular(\\|\/)compiler/,
     root('empty.js')
   ),
-  new NormalModuleReplacementPlugin(
-    /@angular(\\|\/)platform-browser-dynamic/,
-    root('empty.js')
-  ),
+
   new NormalModuleReplacementPlugin(
     /dom(\\|\/)debug(\\|\/)ng_probe/,
     root('empty.js')
   ),
+
   new NormalModuleReplacementPlugin(
     /dom(\\|\/)debug(\\|\/)by/,
     root('empty.js')
   ),
+
   new NormalModuleReplacementPlugin(
     /src(\\|\/)debug(\\|\/)debug_node/,
     root('empty.js')
   ),
+
   new NormalModuleReplacementPlugin(
     /src(\\|\/)debug(\\|\/)debug_renderer/,
     root('empty.js')
