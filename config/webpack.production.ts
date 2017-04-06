@@ -1,10 +1,10 @@
 const clone = require('js.clone');
-const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const DefinePlugin = webpack.DefinePlugin;
+const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 const LoaderOptionsPlugin = webpack.LoaderOptionsPlugin;
 const NormalModuleReplacementPlugin = webpack.NormalModuleReplacementPlugin;
 const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
@@ -51,6 +51,16 @@ export const clientPlugins = [
     'process.env': {
       'NODE_ENV': JSON.stringify('production')
     }
+  }),
+
+  new FaviconsWebpackPlugin({
+    logo: './src/favicon.png',
+    prefix: 'assets/favicon/',
+    emitStats: false,
+    statsFilename: 'iconstats.json',
+    inject: true,
+    background: '#ffffff',
+    title: 'Angular Finland'
   }),
 
   new BundleAnalyzerPlugin({

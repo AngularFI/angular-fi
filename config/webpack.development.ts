@@ -1,5 +1,4 @@
 const clone = require('js.clone');
-const path = require('path');
 const webpack = require('webpack');
 const webpackMerge = require('webpack-merge');
 

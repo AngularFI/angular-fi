@@ -97,7 +97,8 @@
   },
   "devDependencies": {
     "@types/jasmine": "^2.5.47",
-    "concurrently": "~3.4.0",
+    "@types/webpack": "^2.2.14",
+    "concurrently": "^3.4.0",
     "jasmine-core": "^2.5.2",
     "karma": "^1.6.0",
     "karma-chrome-launcher": "^2.0.0",

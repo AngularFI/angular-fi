@@ -1,3 +1,1 @@
-import webpackConfig from './config/webpack.development';
-
-export default webpackConfig;
+module.exports = require('./config/webpack.development');
