@@ -1,0 +1,41 @@
+@import '../../../shared/styles/variables'
+@import '../../../shared/styles/mixins'
+
+:host
+  display block
+
+input
+  width 20em
+  margin-right 0.5em
+  font-size 1.1em
+  padding 0.25em
+  border-radius 0.25em
+  border 1px solid gray
+
+button
+  font-size 0.9em
+  letter-spacing 0.1em
+  text-transform uppercase
+  color white
+  background-color red-normal
+  padding 0.5em 1em
+  border 0
+  border-radius 0.25em
+  &:hover
+    background-color red-medium
+  &:disabled
+    background-color gray
+
+.spinner
+  display inline-block
+  width 32px
+  height 32px
+  background-image url('/assets/images/rolling.gif')
+  background-size 32px 32px
+  background-repeat no-repeat
+
+.error
+  color red
+
+.success
+  color green

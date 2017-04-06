@@ -3,6 +3,7 @@ import * as redis from 'redis';
 
 import { RestDefault } from './default';
 import { RestEvent } from './event';
+import { RestSlack } from './slack';
 import { RestTwitter } from './twitter';
 
 declare var process;
@@ -21,6 +22,7 @@ export class Rest {
 
     // Controllers
     this.events();
+    this.slack();
     this.twitter();
 
     // By default output something
@@ -30,6 +32,12 @@ export class Rest {
   private events(): void {
     let restEvent = new RestEvent(this.redis);
     this.router.get('/event/:group', (request: express.Request, response: express.Response) => restEvent.list(request, response));
+  }
+
+  private slack(): void {
+    let restSlack = new RestSlack();
+    this.router.post('/slack', (request: express.Request, response: express.Response) => restSlack.invite(request, response));
+
   }
 
   private twitter(): void {

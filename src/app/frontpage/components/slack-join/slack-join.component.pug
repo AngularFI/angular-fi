@@ -1,0 +1,18 @@
+p
+  input(
+    [(ngModel)]="email",
+    type="email",
+    pattern="[^ @]*@[^ @]*",
+    placeholder="Enter your email"
+  )
+
+  button(
+    (click)="join()",
+    [disabled]="email.length == 0 || sending"
+  ) Send invitation
+
+p.spinner(*ngIf="sending")
+
+p.error(*ngIf="error") {{error}}
+
+p.success(*ngIf="success") Invitation to Angular Finland Slack has been sent to you successfully. Please read your E-mail for more details.

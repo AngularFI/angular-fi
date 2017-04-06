@@ -1,5 +1,6 @@
 import * as express from 'express';
 import * as http from 'http';
+import * as bodyParser from 'body-parser';
 import * as serveStatic from 'serve-static';
 import * as path from 'path';
 import * as mongoose from 'mongoose';
@@ -19,6 +20,7 @@ export class Backend {
   constructor() {
     // Create expressjs application
     this.app = express();
+    this.app.use(bodyParser.json())
 
     // Setup routes
     this.routes();

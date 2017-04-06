@@ -11,6 +11,7 @@ import { FrontpageRoutes } from './frontpage.routing';
 
 import {
   EventsListComponent,
+  SlackJoinComponent,
   TweetComponent,
   TweetsListComponent
 } from './components';
@@ -25,6 +26,7 @@ import {
   declarations: [
     FrontpageComponent,
     EventsListComponent,
+    SlackJoinComponent,
     TweetComponent,
     TweetsListComponent
   ]
