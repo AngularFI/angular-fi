@@ -1,14 +1,12 @@
-import { Component } from "@angular/core";
-
-declare var require;
-const styles: string = require("./contact.component.styl");
-const template: string = require("./contact.component.pug");
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    styles: [styles], 
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  styleUrls: ['./contact.component.styl'],
+  templateUrl: './contact.component.pug'
 })
 
 export class ContactComponent {
-    constructor() {}
+  constructor() {}
 }

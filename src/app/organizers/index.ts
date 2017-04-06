@@ -1,1 +1,1 @@
-export * from "./organizers.module";
+export * from './organizers.module';

@@ -1,1 +1,1 @@
-export * from "./frontpage.module";
+export * from './frontpage.module';

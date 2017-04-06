@@ -1,13 +1,10 @@
-import { Component } from "@angular/core";
-import { ActivatedRoute } from "@angular/router";
-
-declare var require;
-const styles: string = require("./pagenotfound.component.styl");
-const template: string = require("./pagenotfound.component.pug");
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  styleUrls: ['./pagenotfound.component.styl'],
+  templateUrl: './pagenotfound.component.pug'
 })
 
 export class PageNotFoundComponent {}

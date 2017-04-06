@@ -1,11 +1,11 @@
-import { Routes }  from "@angular/router";
+import { Routes }  from '@angular/router';
 
-import { FrontpageComponent } from "./frontpage.component";
+import { FrontpageComponent } from './frontpage.component';
 
 export const FrontpageRoutes: Routes = [
-    {
-        path: "",
-        component: FrontpageComponent,
-        pathMatch: "full"
-    }
+  {
+    path: '',
+    component: FrontpageComponent,
+    pathMatch: 'full'
+  }
 ];

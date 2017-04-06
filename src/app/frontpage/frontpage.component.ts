@@ -1,22 +1,21 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
-import { MeetupService } from "../shared/services";
+import { MeetupService } from '../shared/services';
 
-import { IMeetupEvent } from "../../models";
-
-declare var require;
-const styles: string = require("./frontpage.component.styl");
-const template: string = require("./frontpage.component.pug");
+import { IMeetupEvent } from '../../models';
 
 @Component({
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  styleUrls: ['./frontpage.component.styl'],
+  templateUrl: './frontpage.component.pug'
 })
 
 export class FrontpageComponent {
-    events: IMeetupEvent[];
+  events: IMeetupEvent[];
 
-    constructor(private meetupService: MeetupService) {
-        this.meetupService.events("angular-finland").subscribe( events => this.events = events );
-    }
+  constructor(private meetupService: MeetupService) {
+    this.meetupService.events('angular-finland')
+      .subscribe( events => this.events = events );
+  }
 }

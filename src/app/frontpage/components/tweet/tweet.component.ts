@@ -1,19 +1,17 @@
-import { Component, Input } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, Input } from '@angular/core';
 
-import { ITwitterMessage } from "../../../../models";
-
-declare var require;
-const styles: string = require("./tweet.component.styl");
-const template: string = require("./tweet.component.pug");
+import { ITwitterMessage } from '../../../../models';
 
 @Component({
-    selector: "tweet",
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  selector: 'tweet',
+  styleUrls: ['./tweet.component.styl'],
+  templateUrl: './tweet.component.pug'
 })
 
 export class TweetComponent {
-    @Input() tweet: ITwitterMessage;
+  @Input() tweet: ITwitterMessage;
 
-    constructor() {}
+  constructor() {}
 }

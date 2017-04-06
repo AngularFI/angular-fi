@@ -1,5 +1,5 @@
-import { IMeetupGroup, MeetupGroup } from "./meetup-group.model";
-import { IMeetupVenue, MeetupVenue } from "./meetup-venue.model";
+import { IMeetupGroup, MeetupGroup } from './meetup-group.model';
+import { IMeetupVenue, MeetupVenue } from './meetup-venue.model';
 
 export interface IMeetupEvent {
     created: Date;
@@ -26,19 +26,19 @@ export class MeetupEvent implements IMeetupEvent {
     description: string;
     duration: number;
     group: IMeetupGroup;
-    how_to_find_us: string;
+    'how_to_find_us': string;
     id: number;
     link: string;
     name: string;
-    rsvp_limit: number;
+    'rsvp_limit': number;
     status: string;
     time: Date;
     updated: Date;
-    utc_offset: number;
+    'utc_offset': number;
     venue: IMeetupVenue;
     visibility: string;
-    waitlist_count: number;
-    yes_rsvp_count: number;
+    'waitlist_count': number;
+    'yes_rsvp_count': number;
 
     constructor(params: any) {
         this.created = new Date(params.created);

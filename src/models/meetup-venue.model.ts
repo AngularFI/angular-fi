@@ -11,12 +11,12 @@ export interface IMeetupVenue {
 }
 
 export class MeetupVenue implements IMeetupVenue {
-    address_1: string;
+    'address_1': string;
     city: string;
     country: string;
     id: number;
     lat: number;
-    localized_country_name: string;
+    'localized_country_name': string;
     lon: number;
     name: string;
     repinned: boolean;

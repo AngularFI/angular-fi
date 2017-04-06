@@ -1,4 +1,4 @@
-import * as mongoose from "mongoose";
+import * as mongoose from 'mongoose';
 
 export interface ITodo {
     created: Date;
@@ -7,11 +7,11 @@ export interface ITodo {
 }
 
 export interface ITodoModel extends ITodo, mongoose.Document {}
- 
-export var TodoSchema = new mongoose.Schema({
+
+export const TodoSchema = new mongoose.Schema({
     created: Date,
     updated: Date,
     title: String
 });
 
-export var Todo = mongoose.model<ITodoModel>("Todo", TodoSchema);
+export const Todo = mongoose.model<ITodoModel>('Todo', TodoSchema);

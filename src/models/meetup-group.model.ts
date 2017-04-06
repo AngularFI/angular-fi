@@ -12,7 +12,7 @@ export interface IMeetupGroup {
 export class MeetupGroup implements IMeetupGroup {
     created: Date;
     id: number;
-    join_mode: string;
+    'join_mode': string;
     lat: number;
     lon: number;
     name: string;

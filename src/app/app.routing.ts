@@ -1,11 +1,14 @@
-import { Routes } from "@angular/router";
+import { Routes } from '@angular/router';
 
-declare var System: any;
+import { FrontpageModule } from './frontpage';
+import { OrganizersModule } from './organizers';
+import { ContactModule } from './contact';
+import { PageNotFoundModule } from './pagenotfound';
 
 export const AppRoutes: Routes = [
-    { path: "", pathMatch: "full", loadChildren: "./frontpage/index#FrontpageModule" },
-    { path: "organizers", loadChildren: "./organizers/index#OrganizersModule" },
-    { path: "contact", loadChildren: "./contact/index#ContactModule" },
-    { path: "404", loadChildren: "./pagenotfound/index#PageNotFoundModule" },
-    { path: "**", pathMatch: "full", redirectTo: "/404" }
+  { path: '', pathMatch: 'full', loadChildren: () => FrontpageModule },
+  { path: 'organizers', loadChildren: () => OrganizersModule },
+  { path: 'contact', loadChildren: () => ContactModule },
+  { path: '404', loadChildren: () => PageNotFoundModule },
+  { path: '**', pathMatch: 'full', redirectTo: '/404' }
 ];

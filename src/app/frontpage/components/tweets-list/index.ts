@@ -1,1 +1,1 @@
-export * from "./tweets-list.component";
+export * from './tweets-list.component';

@@ -1,19 +1,16 @@
-import { Component, HostBinding, Input } from "@angular/core";
-import { Router } from "@angular/router";
-
-declare var require;
-const styles: string = require("./header.component.styl");
-const template: string = require("./header.component.pug");
+import { Component, ChangeDetectionStrategy, ViewEncapsulation, HostBinding, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
-    selector: "header",
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  selector: 'header',
+  styleUrls: ['./header.component.styl'],
+  templateUrl: './header.component.pug'
 })
 
 export class HeaderComponent {
-    @HostBinding("class.loading") @Input("loading") loading: boolean;
+  @HostBinding('class.loading') @Input('loading') loading: boolean;
 
-    constructor(public router: Router) {}
-
+  constructor(public router: Router) {}
 }

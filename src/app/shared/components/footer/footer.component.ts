@@ -1,15 +1,13 @@
-import { Component } from "@angular/core";
-
-declare var require;
-const styles: string = require("./footer.component.styl");
-const template: string = require("./footer.component.pug");
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: "footer",
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  selector: 'footer',
+  styleUrls: ['./footer.component.styl'],
+  templateUrl: './footer.component.pug'
 })
 
 export class FooterComponent {
-    constructor() {}
+  constructor() {}
 }

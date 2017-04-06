@@ -1,25 +1,23 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
-import { TwitterService } from "../../../shared/services";
+import { TwitterService } from '../../../shared/services';
 
-import { ITwitterMessage } from "../../../../models";
-
-declare var require;
-const styles: string = require("./tweets-list.component.styl");
-const template: string = require("./tweets-list.component.pug");
+import { ITwitterMessage } from '../../../../models';
 
 @Component({
-    selector: "tweets-list",
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  selector: 'tweets-list',
+  styleUrls: ['./tweets-list.component.styl'],
+  templateUrl: './tweets-list.component.pug'
 })
 
 export class TweetsListComponent {
-    tweets: ITwitterMessage[];
+  tweets: ITwitterMessage[];
 
-    constructor(private twitterService: TwitterService) {
-        this.twitterService.tweets("#AngularFI").subscribe( tweets => {
-            this.tweets = tweets;
-        });
-    }
+  constructor(private twitterService: TwitterService) {
+    this.twitterService.tweets('#AngularFI').subscribe( tweets => {
+      this.tweets = tweets;
+    });
+  }
 }

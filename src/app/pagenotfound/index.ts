@@ -1,1 +1,1 @@
-export * from "./pagenotfound.module";
+export * from './pagenotfound.module';

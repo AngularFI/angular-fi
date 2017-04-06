@@ -1,23 +1,21 @@
-import { Component } from "@angular/core";
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
-import { MeetupService } from "../../../shared/services";
+import { MeetupService } from '../../../shared/services';
 
-import { IMeetupEvent } from "../../../../models";
-
-declare var require;
-const styles: string = require("./events-list.component.styl");
-const template: string = require("./events-list.component.pug");
+import { IMeetupEvent } from '../../../../models';
 
 @Component({
-    selector: "events-list",
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  selector: 'events-list',
+  styleUrls: ['./events-list.component.styl'],
+  templateUrl: './events-list.component.pug'
 })
 
 export class EventsListComponent {
-    events: IMeetupEvent[];
+  events: IMeetupEvent[];
 
-    constructor(private meetupService: MeetupService) {
-        this.meetupService.events("angular-finland").subscribe( events => this.events = events );
-    }
+  constructor(private meetupService: MeetupService) {
+    this.meetupService.events('angular-finland').subscribe( events => this.events = events );
+  }
 }

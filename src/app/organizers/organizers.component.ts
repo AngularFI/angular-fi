@@ -1,14 +1,12 @@
-import { Component } from "@angular/core";
-
-declare var require;
-const styles: string = require("./organizers.component.styl");
-const template: string = require("./organizers.component.pug");
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    styles: [styles], 
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.Emulated,
+  styleUrls: ['./organizers.component.styl'],
+  templateUrl: './organizers.component.pug'
 })
 
 export class OrganizersComponent {
-    constructor() {}
+  constructor() {}
 }

@@ -1,19 +1,17 @@
-import { Component } from "@angular/core";
-
-declare var require;
-const styles: string = require("./app.component.styl");
-const template: string = require("./app.component.pug");
+import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
 @Component({
-    selector: "app",
-    styles: [styles],
-    template
+  changeDetection: ChangeDetectionStrategy.Default,
+  encapsulation: ViewEncapsulation.None,
+  selector: 'app',
+  styleUrls: ['./app.component.styl'],
+  templateUrl: './app.component.pug'
 })
 
 export class AppComponent {
-    loading: boolean = true;
+  loading: boolean = true;
 
-    constructor() {
-        setTimeout(() => this.loading = false, 2500);
-    }
+  constructor() {
+    setTimeout(() => this.loading = false, 2500);
+  }
 }

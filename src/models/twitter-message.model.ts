@@ -1,4 +1,4 @@
-import * as moment from "moment";
+import * as moment from 'moment';
 
 export interface ITwitterMessage {
     created: Date;
@@ -27,18 +27,18 @@ export class TwitterMessage implements ITwitterMessage {
 
     constructor(params: any) {
         this.created = this.parseDate(params.created_at);
-        this.id = parseInt(params.id);
-        this.image = (params.entities && params.entities.media && params.entities.media[0]) ? params.entities.media[0].media_url.replace(/^http:/, "") : null;
+        this.id = parseInt(params.id, 10);
+        this.image = (params.entities && params.entities.media && params.entities.media[0]) ? params.entities.media[0].media_url.replace(/^http:/, '') : null;
         this.message = params.text;
-        this.retweetCount = parseInt(params.retweet_count);
+        this.retweetCount = parseInt(params.retweet_count, 10);
         this.retweeted = params.retweeted ? true : false;
-        this.link = "https://twitter.com/" + params.user.screen_name + "/status/" + params.id_str;
-        this.userLink = params.user ? ("https://twitter.com/" + params.user.screen_name) : null;
+        this.link = 'https://twitter.com/' + params.user.screen_name + '/status/' + params.id_str;
+        this.userLink = params.user ? ('https://twitter.com/' + params.user.screen_name) : null;
         this.userName = params.user ? params.user.name : null;
         this.userScreenName = params.user ? params.user.screen_name : null;
-    }     
+    }
 
-    private parseDate(tweetDate: string) {
-        return moment(tweetDate, "dd MMM DD HH:mm:ss ZZ YYYY", "en").toDate();
+    private parseDate(tweetDate: string): Date {
+        return moment(tweetDate, 'dd MMM DD HH:mm:ss ZZ YYYY', 'en').toDate();
     }
 }
