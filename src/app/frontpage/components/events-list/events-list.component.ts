@@ -13,9 +13,10 @@ import { IMeetupEvent } from '../../../../models';
 })
 
 export class EventsListComponent {
-  events: IMeetupEvent[];
+  events: IMeetupEvent[] = [];
 
   constructor(private meetupService: MeetupService) {
-    this.meetupService.events('angular-finland').subscribe( events => this.events = events );
+    this.meetupService.events('angular-finland')
+      .subscribe( events => this.events = events );
   }
 }
