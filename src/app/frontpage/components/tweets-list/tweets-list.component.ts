@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
-import { TwitterService } from '../../../shared/services';
+import { TwitterService } from '../../../core/services';
 
 import { ITwitterMessage } from '../../../../models';
 

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
-import { MeetupService } from '../../../shared/services';
+import { MeetupService } from '../../../core/services';
 
 import { IMeetupEvent } from '../../../../models';
 

@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, ViewEncapsulation, Input } from '@angular/core';
 
-import { SlackService } from '../../../shared/services';
+import { SlackService } from '../../../core/services';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.Default,

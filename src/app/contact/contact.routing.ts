@@ -1,11 +1,10 @@
-import { Routes }  from '@angular/router';
-
+import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact.component';
 
-export const ContactRoutes: Routes = [
+export const ContactRouting = RouterModule.forChild([
   {
     path: '',
     component: ContactComponent,
     pathMatch: 'full'
   }
-];
+]);

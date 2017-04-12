@@ -1,7 +1,5 @@
 import { Component, ChangeDetectionStrategy, ViewEncapsulation } from '@angular/core';
 
-import { MeetupService } from '../shared/services';
-
 import { IMeetupEvent } from '../../models';
 
 @Component({
@@ -12,10 +10,5 @@ import { IMeetupEvent } from '../../models';
 })
 
 export class FrontpageComponent {
-  events: IMeetupEvent[];
-
-  constructor(private meetupService: MeetupService) {
-    this.meetupService.events('angular-finland')
-      .subscribe( events => this.events = events );
-  }
+  constructor() {}
 }

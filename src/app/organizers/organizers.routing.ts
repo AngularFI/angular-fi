@@ -1,11 +1,10 @@
-import { Routes }  from '@angular/router';
-
+import { RouterModule }  from '@angular/router';
 import { OrganizersComponent } from './organizers.component';
 
-export const OrganizersRoutes: Routes = [
+export const OrganizersRouting = RouterModule.forChild([
   {
     path: '',
     component: OrganizersComponent,
     pathMatch: 'full'
   }
-];
+]);
