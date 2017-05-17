@@ -53,19 +53,23 @@ export const commonConfig = {
       {
         test: /\.ts$/,
         exclude: [/\.(spec|e2e|d)\.ts$/],
-        loaders: ['ts-loader', 'angular2-template-loader']
+        use: ['ts-loader', 'angular2-template-loader' ]
       },
       {
         test: /\.pug/,
-        loaders: ['raw-loader', 'pug-html-loader']
+        use: ['raw-loader', 'pug-html-loader']
       },
       {
         test: /\.styl$/,
-        loaders: ['raw-loader', 'postcss-loader', 'stylus-loader']
+        use: [
+          'raw-loader',
+          { loader: 'postcss-loader', options: { sourceMap: true } },
+          { loader: 'stylus-loader', options: { sourceMap: true } }
+        ]
       },
       {
         test: /\.json$/,
-        loader: 'json-loader'
+        use: ['json-loader']
       }
     ],
   }
