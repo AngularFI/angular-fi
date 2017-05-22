@@ -11,6 +11,10 @@ input
   padding 0.25em
   border-radius 0.25em
   border 1px solid gray
+  +for_breakpoint(mobile)
+    display block
+    width calc(100% - 0.5em)
+    margin-bottom 0.5em
 
 button
   font-size 0.9em
@@ -25,6 +29,9 @@ button
     background-color red-medium
   &:disabled
     background-color gray
+  +for_breakpoint(mobile)
+    display block
+    width 100%
 
 .spinner
   display inline-block
