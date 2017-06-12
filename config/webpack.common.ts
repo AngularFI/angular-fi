@@ -128,9 +128,9 @@ export const serverConfig = {
   entry: './src/server',
 
   output: {
-    filename: '../server.js',
-    path: root('./target/assets'),
-    publicPath: '/assets/',
+    filename: 'server.js',
+    path: root('./target'),
+    publicPath: '/',
     libraryTarget: 'commonjs2'
   },
 
