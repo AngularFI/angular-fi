@@ -25,10 +25,13 @@ button
   padding 0.5em 1em
   border 0
   border-radius 0.25em
+  transition background-color .2s ease-out
   &:hover
     background-color red-medium
+    cursor pointer
   &:disabled
     background-color gray
+    cursor not-allowed
   +for_breakpoint(mobile)
     display block
     width 100%
