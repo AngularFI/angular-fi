@@ -41,12 +41,6 @@ export const commonConfig = {
 
   context: root('./'),
 
-  output: {
-    filename: '[name]',
-    path: root('target'),
-    publicPath: ''
-  },
-
   module: {
     exprContextCritical: false,
     rules: [
@@ -78,16 +72,14 @@ export const commonConfig = {
 // Client
 export const clientPlugins = [
   new CommonsChunkPlugin({
-    name: [
-      'assets/js/main.js',
-      'assets/js/vendor.js',
-      'assets/js/polyfills.js'
-    ]
+    name: ['vendor', 'polyfills'],
+    filename: 'assets/js/[name].[hash].js',
+    minChunks: Infinity
   }),
 
   new CopyWebpackPlugin([
     {
-      from: 'src/images',
+      from: './src/images',
       to: 'assets/images'
     }
   ]),
@@ -105,14 +97,15 @@ export const clientConfig = {
   target: 'web',
 
   entry: {
-    'assets/js/main.js': './src/main',
-    'assets/js/vendor.js': './src/vendor',
-    'assets/js/polyfills.js': './src/polyfills'
+    main: './src/main',
+    vendor: './src/vendor',
+    polyfills: './src/polyfills'
   },
 
   output: {
-    filename: '[name]',
-    chunkFilename: 'assets/js/[chunkhash].js'
+    filename: 'assets/js/[name].[hash].js',
+    path: root('./target'),
+    publicPath: '/'
   },
 
   node: {
@@ -132,22 +125,13 @@ export const serverPlugins = [];
 export const serverConfig = {
   target: 'node',
 
-  entry: {
-    'server/index.js': './src/server'
-  },
+  entry: './src/server',
 
   output: {
-    chunkFilename: 'chunk-[name].js',
+    filename: '../server.js',
+    path: root('./target/assets'),
+    publicPath: '/assets/',
     libraryTarget: 'commonjs2'
-  },
-
-  module: {
-    rules: [
-      {
-        test: /@angular(\\|\/)material/,
-        loader: 'imports-loader?window=>global'
-      }
-    ]
   },
 
   externals: includeClientPackages(
