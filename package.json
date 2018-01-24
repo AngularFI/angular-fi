@@ -35,7 +35,7 @@
     "postinstall": "npm run build",
     "server:prod": "node target/server.js",
     "server:dev:frontend": "webpack-dev-server --config config/webpack.devserver.ts",
-    "server:dev:backend": "nodemon target/server.js",
+    "server:dev:backend": "nodemon --exec 'ts-node' ./src/server.ts",
     "server:dev": "npm run server:dev:frontend",
     "server": "npm run server:prod",
     "start": "npm run server"

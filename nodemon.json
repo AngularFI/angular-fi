@@ -1,7 +1,12 @@
 {
-    "script": "target/server/index.js",
-    "watch": ["target/server"],
-    "ext": "js",
-    "env": { "NODE_ENV": "development" },
-    "ignore": ["target/assets"]
+  "verbose": true,
+  "watch": [
+    "src/server.ts",
+    "src/backend",
+    "src/models"
+  ],
+  "ext": "ts tsx js jsx json",
+  "env": {
+    "NODE_ENV": "development"
+  }
 }
