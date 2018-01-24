@@ -11,9 +11,9 @@ export class Meetup {
 
   constructor(private redis: redis.RedisClient) {}
 
-  events(group: string): Promise<IMeetupEvent> {
+  events(group: string): Promise<IMeetupEvent[]> {
     return new Promise( (resolve, reject) => {
-      let url = this.apiUrl + group + '/events?key=' + this.apiKey;
+      const url = this.apiUrl + group + '/events?key=' + this.apiKey;
       this.redis.get(url, (error: any, reply: string) => {
         if (reply) {
           resolve(this.parseData(reply));
@@ -39,8 +39,9 @@ export class Meetup {
     try {
       const data = JSON.parse(raw);
       events = data.events.map( event => new MeetupEvent(event) );
-    } catch (err) {
+    } catch (error) {
       // In case of error...
+      console.error(error);
     }
     return events || [];
   }

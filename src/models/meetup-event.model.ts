@@ -15,7 +15,7 @@ export interface IMeetupEvent {
   time: Date;
   updated: Date;
   utc_offset: number;
-  venue: IMeetupVenue;
+  venue?: IMeetupVenue;
   visibility: string;
   waitlist_count: number;
   yes_rsvp_count: number;
@@ -54,7 +54,7 @@ export class MeetupEvent implements IMeetupEvent {
     this.time = new Date(params.time);
     this.updated = new Date(params.updated);
     this.utc_offset = parseInt(params.utc_offset, 10);
-    this.venue = new MeetupVenue(params.venue);
+    this.venue = params.venue ? new MeetupVenue(params.venue) : undefined;
     this.visibility = params.visibility;
     this.waitlist_count = parseInt(params.waitlist_count, 10);
     this.yes_rsvp_count = parseInt(params.yes_rsvp_count, 10);
