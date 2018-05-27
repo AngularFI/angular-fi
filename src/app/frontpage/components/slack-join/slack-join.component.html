@@ -1,0 +1,21 @@
+<p>
+  <input
+  	[(ngModel)]="email"
+  	type="email"
+  	pattern="[^ @]*@[^ @]*"
+  	placeholder="Enter your email"
+  	[disabled]="true"
+  />
+  <button
+  	(click)="join()"
+  	[disabled]="true || email.length == 0 || sending"
+  >
+		Send invitation
+	</button>
+</p>
+<p class="spinner" *ngIf="sending"></p>
+<p class="error" *ngIf="error">{{error}}</p>
+<p class="success" *ngIf="success">
+	Invitation to Angular Finland Slack has been sent to you successfully.
+  Please read your E-mail for more details.
+</p>

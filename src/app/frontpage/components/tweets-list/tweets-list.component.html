@@ -1,0 +1,5 @@
+<div class="loading" *ngIf="!(tweets | async)"></div>
+<div class="tweets" *ngIf="(tweets | async) && (tweets | async).length > 0">
+  <tweet *ngFor="let tweet of tweets | async | orderBy:'created':true" [tweet]="tweet"></tweet>
+</div>
+<p *ngIf="tweets && (tweets | async).length === 0">No tweets. Please tweet us! :-)</p>
