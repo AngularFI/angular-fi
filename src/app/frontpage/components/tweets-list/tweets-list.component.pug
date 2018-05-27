@@ -1,6 +1,0 @@
-.loading(*ngIf="!tweets")
-.tweets(*ngIf="tweets && tweets.length > 0")
-  masonry(useImagesLoaded="true")
-    masonry-brick(class="brick", *ngFor="let tweet of tweets | orderBy:'created':true")
-      tweet([tweet]="tweet")
-p(*ngIf="!tweets || tweets.length == 0") No tweets. Please tweet us! :-)
