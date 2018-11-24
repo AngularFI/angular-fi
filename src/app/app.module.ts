@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FrontpageModule } from './frontpage'
+
 
 // App component
 import { AppComponent } from './app.component';
@@ -11,7 +13,7 @@ import { AppRouting } from './app.routing';
 import { CoreModule } from './core/core.module';
 
 @NgModule({
-  imports: [CoreModule, AppRouting],
+  imports: [CoreModule, AppRouting,FrontpageModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
   exports: [CoreModule]

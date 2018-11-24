@@ -1,3 +1,5 @@
+// TODO: remove this component, now copied to sharedModule
+
 import { Component } from '@angular/core';
 import { MeetupService } from '../../../core/services';
 import { IMeetupEvent } from '../../../../models';
