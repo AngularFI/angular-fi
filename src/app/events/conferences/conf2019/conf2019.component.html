@@ -1,0 +1,31 @@
+<div class="container">
+    <h2>Angular Finland Conference 2019</h2>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" [routerLink]="['home']" routerLinkActive="active" >Conf home</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#confMenu" aria-controls="confMenu" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="confMenu">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['program']" routerLinkActive="active">Program</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['speakers']" routerLinkActive="active">Speakers</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['workshops']" routerLinkActive="active">Workshops</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['sponsors']" routerLinkActive="active">Sponsors</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" [routerLink]="['info']" routerLinkActive="active">Info</a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+  <div class="mt-3">
+    <router-outlet></router-outlet>
+  </div>
+</div>
