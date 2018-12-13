@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Conf2019Component implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit() {
