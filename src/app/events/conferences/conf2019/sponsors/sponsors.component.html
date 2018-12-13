@@ -1,0 +1,29 @@
+<h3 class="mt-3">Connect with the Angular community</h3>
+<div class="row">
+    <div class="col-md-7">
+      <div class="container">
+          <div class="mb-3">
+              <div *ngFor="let im of sponsorImages; index as i">
+                <img *ngIf="i===randomNumber" src="{{im.src}}" alt="{{im.alt}}" class="img-fluid">
+              </div>
+            </div>
+            <p>Show that your organisation and your people are actively building the Angular community.</p>
+            <p>Make sure that your brand is visible in this trusted forum where developers and leaders seek collaborations, projects, career opportunities and connection. <a [routerLink]="['/organizers']" title="Contact Angular Finland">Contact the conference organizing team</a> and ask for a sponsor's pack.</p>
+            <p>Recruiting Angular developers? Participate as a sponsor and get a stand at the event.</p>
+      </div>
+    </div>
+    <div class="col-md-5">
+      <div class="container">
+          <p class="mt-3">
+          <a [routerLink]="['/organizers']" title="Sponsor this event"><i class="fas fa-download pull-left" style="color:#CC0000"></i>&nbsp;Get a sponsor pack</a></p>
+          <h6>Sponsors get visibility</h6>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">online: web, mail, social</li>
+                <li class="list-group-item">F2F: at the venue</li>
+                <li class="list-group-item">live: in the event content</li>
+                <li class="list-group-item">archive: in the event video, images and material</li>
+              </ul>
+          
+      </div>
+    </div>
+  </div>

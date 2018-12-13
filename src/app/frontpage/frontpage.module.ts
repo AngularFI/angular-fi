@@ -16,12 +16,13 @@ import {
     FrontpageRouting
   ],
   declarations: [
-    FrontpageComponent,
     EventsListComponent,
+    FrontpageComponent,
     SlackJoinComponent,
     TweetComponent,
     TweetsListComponent
-  ]
+  ],
+  exports: [EventsListComponent]
 })
 
 export class FrontpageModule {}
