@@ -1,18 +1,109 @@
 <main>
-  <h2>Frontpage</h2>
-  <h3>About Us</h3>
-  <p>This group focuses on&nbsp;<a href="https://angularjs.org/">AngularJS</a> and&nbsp;<a href="https://angular.io/">Angular Framework</a>, including Angular 2 and it's future successors. We believe that Angular is here to stay for a long time. We want to focus our efforts on providing knowledge on lesser known Angular features and share knowledge on more advanced Angular topics.</p>
-  <p>This group intends to be a place where you don't need to be a guru to speak. If you've tried something new with Angular, maybe stumbled upon a lesser known module or add-on, we want to hear you share it!</p>
-  <h3>Meetup group</h3>
-  <p>Come join in our&nbsp;<a href="http://www.meetup.com/Angular-Finland/">meetups</a> to learn and network! Angular enthusiasts of all levels are welcome!</p>
-  <h3>Slack</h3>
-  <p>You can also join our Slack (currently Slack joining backend is offline):</p>
-  <slack-join></slack-join>
-  <h3>Upcoming meetups:</h3>
-  <meetups-list></meetups-list>
-  <h3>Twitter feed:</h3>
-  <div class="tweet-button"><a href="https://twitter.com/intent/tweet?text=%23AngularFI%20">
-  <div class="bird"></div>
-  <div class="label">Tweet</div></a></div>
-  <tweets-list></tweets-list>
+  <div class="container">
+    <h2>We're the Angular community in Finland</h2>
+    <div class="row">
+      <div class="col-md-7">
+        <div class="card-deck mb-3">
+          
+          <div class="card">
+              <img class="card-img-top" src="./../../assets/images/events/angular-finland-meetup-2016-img-003-16x9.jpg" alt="Our meetups are more fun than this image suggests :)">
+              <div class="card-body">
+                <h5 class="card-title">Meetups</h5>
+                <p class="card-text">Afterwork talks on everything Angular</p>
+                <a href="https://www.meetup.com/Angular-Finland/" target="_blank" title="Meetup group page on meetup.com">
+                <button class="btn btn-primary">
+                  meetup.com
+                </button>
+              </a>
+              </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img-top" src="./../../assets/images/current/ng-vikings-in-finland-2018-img001-16x9.jpg" alt="We're far too modest to say that we have the best Angular conferences - here's a picture of one">
+            <div class="card-body">
+              <h5 class="card-title">Conferences</h5>
+              <p class="card-text">Finland and Nordic level Angular conferences</p>
+              <button [routerLink]="['/events']" routerLinkActive="router-link-active"  target="_blank" title="All the events we're involved in" class="btn btn-primary">
+                Events
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="card-deck mb-3">  
+          <div class="card">
+            <img class="card-img-top" src="./../../assets/images/current/angular-mobile-coffee-shutterstock_546700774-mobile-device-16x9-w500.jpg" alt="Being social on social media - person holds a device by a cup of coffee">
+            <div class="card-body">
+              <h5 class="card-title">Online community</h5>
+              <p class="card-text">In Slack, Twitter, Github, Facebook etc</p>
+              <button [routerLink]="['contact']" routerLinkActive="router-link-active"  target="_blank" title="e-meet Angular developers in Finland" class="btn btn-primary">
+                Connect to people
+              </button>
+            </div>
+          </div>
+  
+          <div class="card">
+            <img class="card-img-top" src="./../../assets/images/current/github-issues-angular-fi-screen02.JPG" alt="List of github issues seeking volunteers">
+            <div class="card-body">
+              <h5 class="card-title">Opensource</h5>
+              <p class="card-text">Develop your Angular skills and benefit the community</p>
+               <a href="https://github.com/AngularFI/angular-fi/issues" target="_blank" title="Collaborate with other Angular developers on our community resources">
+                <button class="btn btn-primary">
+                    Tackle an issue
+                  </button>
+              </a> 
+            </div>
+          </div>
+        </div>
+        <h3>About Angular Finland</h3>
+        <p>We're an association formed to bring Angular people together in Finland. We're here to help people enter the industry, to develop their skills and to provide a platform for experts to share their knowledge with the Angular community.</p>
+        <p>Our main activities are meetups, larger events in Finland and contributing to the ngVikings conference.</p>
+        <p>We welcome new members at any level. You can <a href="https://www.meetup.com/Angular-Finland/" target="_blank" title="Meetup group page on meetup.com">join for free at our meetup.com page</a>.</p>
+      </div>    
+
+      <div class="col-md-5">
+          <h3>Happening now</h3>
+          <!-- CURRENT THING #1 -->
+          <div class="card" style="border: none;">
+              <a [routerLink]="['/2019']" routerLinkActive="router-link-active">
+                <img class="card-img-top" src="./../../assets/images/current/big-hangout-2019-banner-06.jpg" alt="Big Hangout Angular Finland event 2019">
+              </a>
+              <div class="card-body">
+                <!-- <h5 class="card-title">The Big Ha<strong><span style="color:red;">ng</span></strong>out 2019 speaker invitations</h5> -->
+                <p class="card-text"><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">Propose a talk - now open</a></p>
+              </div>
+            </div>
+
+
+          <!-- CURRENT THING #2 -->
+          <div class="card" style="border: none;">
+            <a href="https://ngvikings.org/" target="_blank">
+              <img class="card-img-top" src="./../../assets/images/current/ng-vikings-conference-announcement-2019.jpg" alt="ngVikings conference announcement">
+            </a>
+            <div class="card-body">
+              <!-- <h5 class="card-title">ngVikings 2019 tickets selling fast</h5> -->
+              <p class="card-text"><a href="https://ngvikings.org/" target="_blank">Tickets to the ultimate Nordic Angular conference selling fast</a></p>
+            </div>
+          </div>
+
+         
+          <h3>Get involved</h3>
+          <p>You don't need to be a guru to speak at our meetups. If you've tried something new with Angular or just finished a project that means a lot to you, share it with the community!</p>
+
+          <div class="card" style="width: 18rem;">
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item"><a href="https://www.meetup.com/Angular-Finland/" target="_blank" title="Meetup group page on meetup.com">Come to a meetup</a></li>
+                <li class="list-group-item"><a [routerLink]="['contact']">Give a talk</a></li>
+                <li class="list-group-item"><a [routerLink]="['contact']">Host an event</a></li>
+                <li class="list-group-item"><a [routerLink]="['/events/conferences/2019/sponsors']">Sponsor an event</a></li>
+                <li class="list-group-item"><a href="https://github.com/AngularFI/angular-fi/issues" target="_blank" title="Use and develop your Angular skills to make this site better: visit our Github">Contribute to our opensource</a></li>
+                <li class="list-group-item"><a [routerLink]="['/events/conferences/2019/info']">Volunteer for an event team</a></li>
+                <li class="list-group-item"><a [routerLink]="['organizers']">Be an organizer</a></li>
+                <li class="list-group-item"><a [routerLink]="['contact']">Be a mentor</a></li>
+                <li class="list-group-item"><a href="https://angularfi.slack.com">Create content for the community</a></li>
+              </ul>
+            </div>
+
+      </div>
+    </div>
+  </div>
 </main>
