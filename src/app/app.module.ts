@@ -13,10 +13,11 @@ import { AppRouting } from './app.routing';
 
 // Core module
 import { CoreModule } from './core/core.module';
+import { GetinvolvedComponent } from './getinvolved/getinvolved.component';
 
 @NgModule({
   imports: [CoreModule, AppRouting,FrontpageModule],
-  declarations: [AppComponent],
+  declarations: [AppComponent, GetinvolvedComponent],
   bootstrap: [AppComponent],
   exports: [CoreModule]
 })
