@@ -1,0 +1,16 @@
+a {
+    color: red;
+}
+.btn-primary {
+    background-color: red;
+    border-color: red;
+    color: white;
+}
+.btn-primary:active:focus {
+    background-color: purple;
+    border-color: purple;
+    color: white;
+}
+mark {
+    background-color: hsla(261, 51%, 51%, 0.25);
+  }
