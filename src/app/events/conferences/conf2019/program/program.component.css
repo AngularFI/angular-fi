@@ -4,3 +4,7 @@ a {
 .call-title {
     font-size: large;
 }
+.list-group-item:first-child {
+    background-color: #CC0000;
+    border: #CC0000;
+}
