@@ -61,21 +61,30 @@
       </div>    
 
       <div class="col-md-5">
-          <h3>Happening now</h3>
-          <!-- CURRENT THING #1 -->
+        <h3>Happening now</h3>
+        <!-- CURRENT THING #1 -->
+        <div class="card" style="border: none;">
+          <a [routerLink]="['/2019']" routerLinkActive="router-link-active">
+            <img class="card-img-top" src="./../../assets/images/current/thebighangout.jpg" alt="Big Hangout Angular Finland event 2019">
+          </a>
+          <div class="card-body">
+            <!-- <h5 class="card-title">The Big Ha<strong><span style="color:red;">ng</span></strong>out 2019 speaker invitations</h5> -->
+            <p class="card-text"><a [routerLink]="['/events/conferences/2019/info']" routerLinkActive="router-link-active">Early-bird discounts ending soon</a></p>
+            <p class="card-text"><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">Propose a talk - now open</a></p>
+          </div>
+        </div>
+
+        <!-- CURRENT THING #2 -->
           <div class="card" style="border: none;">
-              <a [routerLink]="['/2019']" routerLinkActive="router-link-active">
-                <img class="card-img-top" src="./../../assets/images/current/big-hangout-2019-banner-07.jpg" alt="Big Hangout Angular Finland event 2019">
-              </a>
-              <div class="card-body">
-                <!-- <h5 class="card-title">The Big Ha<strong><span style="color:red;">ng</span></strong>out 2019 speaker invitations</h5> -->
-                <p class="card-text"><a [routerLink]="['/events/conferences/2019/info']" routerLinkActive="router-link-active">Early-bird discounts ending soon</a></p>
-                <p class="card-text"><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">Propose a talk - now open</a></p>
-              </div>
+            <a href="https://www.meetup.com/Angular-Finland/events/258290469/" target="_blank">
+              <img class="card-img-top" src="./../../assets/images/current/upgrading-angularjs-text-simple-small-angular-finland-meetup.png" alt="Next Angular Finland Meetup: mountain path to Angular upgrade">
+            </a>
+            <div class="card-body">
+              <!-- <h5 class="card-title">The Big Ha<strong><span style="color:red;">ng</span></strong>out 2019 speaker invitations</h5> -->
+              <p class="card-text"><a href="https://www.meetup.com/Angular-Finland/events/258290469/" target="_blank">Register for the meetup</a></p>
             </div>
-
-
-          <!-- CURRENT THING #2 -->
+          </div>
+          <!-- CURRENT THING #3 -->
           <div class="card" style="border: none;">
             <a href="https://ngvikings.org/" target="_blank">
               <img class="card-img-top" src="./../../assets/images/current/ng-vikings-conference-announcement-2019.jpg" alt="ngVikings conference announcement">

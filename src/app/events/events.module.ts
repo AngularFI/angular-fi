@@ -13,12 +13,13 @@ import { WorkshopsComponent } from './conferences/conf2019/workshops/workshops.c
 import { SpeakersComponent } from './conferences/conf2019/speakers/speakers.component';
 import { InfoComponent } from './conferences/conf2019/info/info.component';
 import { SponsorsComponent } from './conferences/conf2019/sponsors/sponsors.component';
+import { RegistrationButtonsComponent } from './conferences/conf2019/registration-buttons/registration-buttons.component';
 
 
 @NgModule({
   imports: [
     CommonModule, SharedModule, EventsRouting
   ],
-  declarations: [EventsComponent, ConferencesComponent, NgVikingsComponent, Conf2019Component, ProgramComponent, ConfHomeComponent, WorkshopsComponent, SpeakersComponent, InfoComponent, SponsorsComponent]
+  declarations: [EventsComponent, ConferencesComponent, NgVikingsComponent, Conf2019Component, ProgramComponent, ConfHomeComponent, WorkshopsComponent, SpeakersComponent, InfoComponent, SponsorsComponent, RegistrationButtonsComponent]
 })
 export class EventsModule { }
