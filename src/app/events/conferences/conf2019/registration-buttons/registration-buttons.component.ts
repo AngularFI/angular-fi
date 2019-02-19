@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RegistrationButtonsComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {

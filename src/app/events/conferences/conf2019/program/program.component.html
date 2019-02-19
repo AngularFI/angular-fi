@@ -3,8 +3,68 @@
 </div>
 
 <div class="row">
-  <div class="col-md-7">
-    <h4 class="text-muted mt-4">Wednesday 13th March 2019</h4>
+  <div class="col-md-12">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card-deck">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">13 March</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Workshop</h6>
+                <p class="card-text">Full-day workshop</p>
+                  <li>10.00 <a [routerLink]="['/events/conferences/2019/program']" fragment="day1workshop" class="card-link">Getting started with Angular</a></li>
+                  <!-- <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> -->
+              </div>
+            </div>
+
+  <!--         </div>
+          <div class="col-md-4">
+  -->
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">14 March</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Workshops & Big Hangout</h6>
+                <p>Half-day workshops</p>
+                <ul>
+                  <li>10.00 <a [routerLink]="['/events/conferences/2019/program']" fragment="day2workshops" class="card-link">Going mobile with Nativescript</a></li>
+                  <li>10.00 <a [routerLink]="['/events/conferences/2019/program']" fragment="upgrading" class="card-link">Upgrading AngularJS</a></li>
+
+                </ul>
+                <p>Event</p>
+                <ul>
+                  <li>14.30 <a [routerLink]="['/events/conferences/2019/program']" fragment="day2event" class="card-link">The Big Hangout</a></li>
+                </ul>
+                <!-- <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> -->
+              </div>
+            </div>
+
+  <!--         </div>
+          <div class="col-md-4">
+  -->
+            <div class="card" style="width: 18rem;">
+              <div class="card-body">
+                <h5 class="card-title">15 March</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Workshops</h6>
+                <p class="card-text">Full-day workshops</p>
+                <ul>
+                  <li>10.00 <a [routerLink]="['/events/conferences/2019/program']" fragment="day3workshops" class="card-link">Advanced Angular</a></li>
+                  <li>10.00 <a [routerLink]="['/events/conferences/2019/program']" fragment="ngrx-workshop" class="card-link">Advanced State Management</a></li>
+                </ul>
+                <!-- <a href="#" class="card-link">Card link</a>
+                <a href="#" class="card-link">Another link</a> -->
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+    <hr>
+    <h4 class="text-muted mt-4" id="day1workshop">Wednesday 13th March 2019</h4>
     <div class="list-group">
       <div class="list-group-item list-group-item-action flex-column align-items-start active">
         <div class="d-flex w-100 justify-content-between">
@@ -17,18 +77,18 @@
       <div class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Getting started with Angular</h5>
-          <small class="text-muted">Full day</small>
+          <small class="text-muted">10.00-17.00</small>
         </div>
         <p class="mb-1">An introduction to Angular, starting with the basics</p>
-        <p><a [routerLink]="['/events/conferences/2019/workshops']" routerLinkActive="router-link-active">Course content and registration</a></p>
+        <p><a [routerLink]="['/events/conferences/2019/workshops']" fragment="GettingStarted" routerLinkActive="router-link-active">Course content and registration</a></p>
       </div>
     </div>
-    <h4 class="text-muted mt-4">Thursday 14th March 2019</h4>
+    <h4 class="text-muted mt-4" id="day2workshops">Thursday 14th March 2019</h4>
     <div class="list-group">
       <div class="list-group-item list-group-item-action flex-column align-items-start active">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Workshops</h5>
-          <small>Conference morning</small>
+          <small>Event-day morning</small>
         </div>
         <p class="mb-1">Upgrade your Angular skills</p>
         <small>Learn with expert Angular trainers</small>
@@ -36,26 +96,26 @@
       <div class="list-group-item list-group-item-action flex-column align-items-start">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">From web to mobile with Angular and NativeScript</h5>
-          <small class="text-muted">Half day</small>
+          <small class="text-muted">10.00-14.00</small>
         </div>
         <p class="mb-1">In this hands-on practical workshop, we'll start with an introduction to NativeScript, build a NativeScript app and take an existing Angular web application to mobile.
             </p>
-            <p><a [routerLink]="['/events/conferences/2019/workshops']" routerLinkActive="router-link-active">Course content and registration</a></p>
+            <p><a [routerLink]="['/events/conferences/2019/workshops']" fragment="mobile" routerLinkActive="router-link-active">Course content and registration</a></p>
           </div>
-      <div class="list-group-item list-group-item-action flex-column align-items-start">
+      <div class="list-group-item list-group-item-action flex-column align-items-start" id="upgrading">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Upgrading AngularJS applications with ngUpgrade</h5>
-            <small class="text-muted">Check for schedule updates</small>
+            <small class="text-muted">10.00-14.00</small>
           </div>
           <p>An in-depth walkthrough of the ngUpgrade path to Angular from AngularJS.
               </p>
               <p class="mb-1">This workshop will run on Wed 13th or Thursday 14th March. Check for updates.
               </p>
-              <p><a [routerLink]="['/events/conferences/2019/workshops']" routerLinkActive="router-link-active">Course content and registration</a></p>
+              <p><a [routerLink]="['/events/conferences/2019/workshops']" fragment="upgrading" routerLinkActive="router-link-active">Course content and registration</a></p>
             </div>
     </div>
 
-    <div class="list-group mt-3">
+    <div class="list-group mt-3" id="day2event">
         <div class="list-group-item list-group-item-action flex-column align-items-start active">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Talks</h5>
@@ -72,7 +132,7 @@
           </div>
           <p class="mb-1">What would happen if we make two chatbots talk to each other? Let's find out! Artificial intelligence can be scary, but don't worry - we are not alone!
           </p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">More about Stanimira and the AI chatbot</a></p>
+          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Stanimira" routerLinkActive="router-link-active">More about Stanimira and the AI chatbot</a></p>
         </div>
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -82,7 +142,7 @@
           </div>
           <p class="mb-1">A walk-through of the key decision points on the journey from AngularJS to modern Angular.
           </p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">More about Sam and ngUpgrade</a></p>
+          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Sam" routerLinkActive="router-link-active">More about Sam and ngUpgrade</a></p>
         </div>
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -92,7 +152,7 @@
           </div>
           <p class="mb-1">Which feature is the most widespread and the most important for business success, yet so often overlooked in development projects?
           </p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">More about Sani and the web's most underrated feature</a></p>
+          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Sani" routerLinkActive="router-link-active">More about Sani and the web's most underrated feature</a></p>
         </div>
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -102,7 +162,7 @@
           </div>
           <p class="mb-1">The web has changed a lot in recent years. We're building applications that must offer highly interactive user experiences while communicating with a smart, rich-data back end or cloud computing infrastructure. RxJS brings to Angular an elegant way to meet this new demand.
           </p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" routerLinkActive="router-link-active">More about Michael and how to build performant apps with RxJs</a></p>
+          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Michael" routerLinkActive="router-link-active">More about Michael and how to build performant apps with RxJs</a></p>
         </div>
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -122,7 +182,7 @@
           </a></p>
       </div> -->
 
-      <h4 class="text-muted mt-4">Friday 15th March 2019</h4>
+      <h4 class="text-muted mt-4" id="day3workshops">Friday 15th March 2019</h4>
       <div class="list-group mt-3">
         <div class="list-group-item list-group-item-action flex-column align-items-start active">
           <div class="d-flex w-100 justify-content-between">
@@ -133,28 +193,28 @@
           <small>Get advanced Angular skills in a masterclass</small>
         </div>
 
-        <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="list-group-item list-group-item-action flex-column align-items-start" id="ngrx-workshop">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Advanced Angular</h5>
-            <small class="text-muted">Laurent Duveau, Angular Academy</small>
+            <small class="text-muted">10.00-17.00</small>
           </div>
           <p class="mb-1">Supercharge your Angular skills! Following successful trainings in Finland at ngVikings conference in 2018, Angular Academy is back with another great Advanced Angular course.
           </p>
-          <p><a [routerLink]="['/events/conferences/2019/workshops']" routerLinkActive="router-link-active">Course content and registration</a></p>
+          <p><a [routerLink]="['/events/conferences/2019/workshops']" fragment="AdvancedAngular" routerLinkActive="router-link-active">Course content and registration</a></p>
         </div>
         
         <div class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">NgRx - Mastering Advanced State Management</h5>
-            <small class="text-muted">Michael Hladky, Angular College</small>
+          <small class="text-muted">10.00-17.00</small>
           </div>
           <p class="mb-1">You already know the basics of @ngrx/store and you are ready for new challenges. This is your chance to learn best practices derived from real-world projects. In a full-day in-depth course on NgRx you will learn advanced approaches such as facades, optimistic updates, memoized selector composition, and many other tricks.</p>
-          <p><a [routerLink]="['/events/conferences/2019/workshops']" routerLinkActive="router-link-active">Course content and registration</a></p>
+          <p><a [routerLink]="['/events/conferences/2019/workshops']" fragment="ngrx" routerLinkActive="router-link-active">Course content and registration</a></p>
         </div>
         
       </div>
   </div>
-  <div class="col-md-5">
+  <!-- <div class="col-md-5">
       
       <h5>Propose a talk</h5>
     <p>Our call for papers is still open for a short time only. We invite proposals from teams, writers, speakers and developers working on these themes</p>
@@ -221,7 +281,7 @@
     </div>
   </div>
 </div>
-  </div>
+  </div> -->
 </div>
 
 

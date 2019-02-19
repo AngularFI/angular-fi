@@ -8,7 +8,8 @@
               How do I get a ticket?
             </dt>
             <dd>
-              Register in our <a href="https://www.meetup.com/Angular-Finland" title="Registration is on the Angular Finland Meetup page">meetup group</a> page. You'll need to join the meetup network, if you're not already a member. Membership is free.
+              Register via the buttons below. Use your discount code if you are a member of Angular Finland. Join our <a href="https://www.meetup.com/Angular-Finland" title="Become a member of Angular Finland">meetup group</a> page. Membership is free.
+              <!-- Register in our <a href="https://www.meetup.com/Angular-Finland" title="Registration is on the Angular Finland Meetup page">meetup group</a> page. You'll need to join the meetup network, if you're not already a member. Membership is free. -->
             </dd>
             <p><!-- <a href="https://www.meetup.com/Angular-Finland/events/257192850" title="Registration is on the Angular Finland Meetup page" class="m-3">
               <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block"><span class="text-white">Register</span></button>
@@ -19,7 +20,10 @@
             <p>Not able to access meetup.com? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" target="_blank">Try another registration method.</a></p>
           
           -->
-            <registration-buttons></registration-buttons>
+            <!-- <registration-buttons></registration-buttons> -->
+            <registration-button
+              [ticketUrl]="'https://www.eventbrite.com/e/the-big-hangout-2019-tickets-56358770600'" [buttonText]="'Buy ticket'"
+            ></registration-button>
           </p>
 
             <dt>
@@ -32,7 +36,7 @@
               Is there an early-bird rate?
           </dt>
           <dd>
-            Yes. Act fast. The early bird price saves you 25% and it ends soon!
+            There was, but it is gone. But you can still use your Angular Finland member discount. Check your meetup.com mail or contact the organising team.
           </dd>
             <dt>
                 Can I get a discount or a free entry?
@@ -49,13 +53,13 @@
               
               To qualify, you'll need to show your student status or describe the path you are on to enter this field, giving reasons why paying for a ticket is not possible for you at this time. Contact the event organizing team listed on this page.
             </dd>
-            <dt>
+<!--             <dt>
               When will the program and speakers be published?
             </dt>
             <dd>
               January 2019.
             </dd>
-            <dt>
+ -->            <dt>
               How do I register for a workshop?
             </dt>
             <dd>

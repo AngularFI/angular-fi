@@ -23,7 +23,7 @@
 <div id="accordion">
     
   
-  <div class="card mt-3">
+  <div class="card mt-3" id="GettingStarted">
       <div class="card-header" id="headingOne">
         <h2 class="mb-0 text-center">
           <a class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
@@ -69,19 +69,21 @@
         <div class="row">
             <div class="col-3">&nbsp;</div>
             <div class="col-6">
-              <a href="https://www.meetup.com/Angular-Finland/events/258264494/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
+              <!-- <a href="https://www.meetup.com/Angular-Finland/events/258264494/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
 
               <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block text-center"><span class="text-white">Member registration on meetup.com</span></button>
               </a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" title="Registration form" class="m-3 text-center alternative-registration">
                 <button type="button" class="btn btn-lg btn-block text-center alternative-registration"><span class="text-white">More registration options</span></button>
-              </a>
-
+              </a> -->
+              <registration-button
+                [ticketUrl]="'https://www.eventbrite.com/e/training-get-started-with-angular-tickets-56717751321'" [buttonText]="'Register'"
+              ></registration-button>
             </div>
             <div class="col-3">&nbsp;</div>
         </div>
         <div class="text-center">
-          <small>Reserve your place.<br>No credit card required!</small>
+          <small>Reserve your place today!</small>
         </div>
           
         </div>
@@ -89,7 +91,7 @@
   </div>
 
 
-    <div class="card mt-3">
+    <div class="card mt-3" id="mobile">
         <div class="card-header" id="headingTwo">
           <h2 class="mb-0 text-center">
             <a class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
@@ -129,24 +131,27 @@
             <div class="row">
                 <div class="col-3">&nbsp;</div>
                 <div class="col-6">
-                  <a href="https://www.meetup.com/Angular-Finland/events/258264558/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
+                  <!-- <a href="https://www.meetup.com/Angular-Finland/events/258264558/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
                   <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block text-center"><span class="text-white">Member registration on meetup.com</span></button>
                   </a>
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" title="Registration form" class="m-3 text-center alternative-registration">
                     <button type="button" class="btn btn-lg btn-block text-center alternative-registration"><span class="text-white">More registration options</span></button>
-                  </a>
+                  </a> -->
+                  <registration-button
+                  [ticketUrl]="'https://www.eventbrite.com/e/training-from-web-to-mobile-with-angular-nativescript-tickets-56713953963'" [buttonText]="'Register'"
+                ></registration-button>
                 </div>
                 <div class="col-3">&nbsp;</div>
             </div>
             <div class="text-center">
-              <small>Reserve your place.<br>No credit card required!</small>
+              <small>Reserve your place today!</small>
             </div>
           </div>
         </div>
       </div>
 
 
-    <div class="card mt-3">
+    <div class="card mt-3" id="upgrading">
       <div class="card-header" id="headingThree">
         <h2 class="mb-0 text-center">
           <a class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
@@ -185,23 +190,26 @@
         <div class="row">
             <div class="col-3">&nbsp;</div>
             <div class="col-6">
-              <a href="https://www.meetup.com/Angular-Finland/events/258264621/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
+              <!-- <a href="https://www.meetup.com/Angular-Finland/events/258264621/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
               <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block text-center"><span class="text-white">Member registration on meetup.com</span></button>
               </a>
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" title="Registration form" class="m-3 text-center alternative-registration">
                 <button type="button" class="btn btn-lg btn-block text-center alternative-registration"><span class="text-white">More registration options</span></button>
-              </a>
+              </a> -->
+              <registration-button
+                [ticketUrl]="'https://www.eventbrite.com/e/training-upgrading-angularjs-applications-with-ngupgrade-tickets-56714907816'" [buttonText]="'Register'"
+              ></registration-button>
             </div>
             <div class="col-3">&nbsp;</div>
         </div>
         <div class="text-center">
-          <small>Reserve your place.<br>No credit card required!</small>
+          <small>Reserve your place today!</small>
         </div>
 
         </div>
       </div>
     </div>
-    <div class="card mt-3">
+    <div class="card mt-3" id="AdvancedAngular">
         <div class="card-header" id="headingFour">
           <h2 class="mb-0 text-center">
             <a class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
@@ -280,17 +288,20 @@
             <div class="row">
                 <div class="col-3">&nbsp;</div>
                 <div class="col-6">
-                  <a href="https://www.meetup.com/Angular-Finland/events/258264687/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
+                    <registration-button
+                    [ticketUrl]="'https://www.eventbrite.com/e/training-advanced-angular-tickets-56714988056'" [buttonText]="'Register'"
+                    ></registration-button>
+                <!--   <a href="https://www.meetup.com/Angular-Finland/events/258264687/" title="Registration is on the Angular Finland Meetup page" class="m-3 text-center">
                   <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block text-center"><span class="text-white">Member registration in meetup.com</span></button>
                   </a>
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" title="Registration form" class="m-3 text-center alternative-registration">
                     <button type="button" class="btn btn-lg btn-block text-center alternative-registration"><span class="text-white">More registration options</span></button>
-                  </a>
+                  </a> -->
                 </div>
                 <div class="col-3">&nbsp;</div>
             </div>
             <div class="text-center">
-              <small>Reserve your place.<br>No credit card required!</small>
+              <small>Reserve your place today!</small>
             </div>
 
 
@@ -298,11 +309,11 @@
           </div>
         </div>
       </div>
-      <div class="card mt-3">
+      <div class="card mt-3" id="ngrx">
         <div class="card-header" id="headingFour">
           <h2 class="mb-0 text-center">
             <a class="btn btn-link" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-              NgRx - Mastering Advanced State Management
+              <span style="white-space:normal">NgRx - Mastering Advanced State Management</span>
             </a>
           </h2>
         </div>
@@ -349,17 +360,21 @@
             <div class="row">
                 <div class="col-3">&nbsp;</div>
                 <div class="col-6">
-                  <a href="https://www.meetup.com/Angular-Finland/events/258554420/" title="Reserve a place on the Angular Finland Meetup page" class="m-3 text-center">
+                  <!-- <a href="https://www.meetup.com/Angular-Finland/events/258554420/" title="Reserve a place on the Angular Finland Meetup page" class="m-3 text-center">
                   <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block text-center"><span class="text-white">Member registration in meetup.com</span></button>
                   </a>
                   <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" title="Registration form" class="m-3 text-center alternative-registration">
                     <button type="button" class="btn btn-lg btn-block text-center alternative-registration"><span class="text-white">More registration options</span></button>
-                  </a>
+                  </a> -->
+                  <registration-button
+                  [ticketUrl]="'https://www.eventbrite.com/e/training-ngrx-mastering-advanced-state-management-tickets-56715100392'" [buttonText]="'Register'"
+                  ></registration-button>
+                  
                 </div>
                 <div class="col-3">&nbsp;</div>
             </div>
             <div class="text-center">
-              <small>Reserve your place.<br>No credit card required!</small>
+              <small>Reserve your place today!</small>
             </div>
 
 
