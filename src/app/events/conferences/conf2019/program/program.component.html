@@ -37,6 +37,7 @@
                 <p>Event</p>
                 <ul>
                   <li>14.30 <a [routerLink]="['/events/conferences/2019/program']" fragment="day2event" class="card-link">The Big Hangout</a></li>
+                  <li>20.30 <a [routerLink]="['/events/conferences/2019/program']" fragment="party" class="card-link">After-party</a></li>
                 </ul>
                 <!-- <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a> -->
@@ -179,6 +180,17 @@
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Achieving performance in heavy applications with Angular and WebAssembly</h5>
+            <small class="text-muted">Salar Kaboli</small>
+          </div>
+          <p class="mb-1">Let's build an application called "Game of Life" using best parts of Angular and WebAssembly. Game of Life has heavy calculations that can be too much for JavaScript to tackle alone.</p>
+          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Salar" routerLinkActive="router-link-active">More about Salar and optimising performance in heavy applications</a></p>
+        </div>
+
+
+
+        <div class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">More talks at the biggest gathering of the Angular community in Finland</h5>
             <small class="text-muted">Great speakers</small>
           </div>
@@ -188,6 +200,30 @@
   
 
     </div>
+
+    <div class="list-group mt-3" id="party">
+      <div class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Party</h5>
+          <small>14th March late until very late</small>
+        </div>
+        <p class="mb-1">Big Hangout participants only</p>
+        <small>Relax with more food, music and great company at Gofore's city centre location</small>
+      </div>
+
+      <div class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">Afterparty: the Big Hangout continues</h5>
+          <small class="text-muted">Thanks to Gofore for hosting!</small>
+        </div>
+        <p class="mb-1">From typescript to tequila. From lifecycle hooks to guitar hooks. From pipes to smoke-free celebration. From template expressions to dancefloor moves. Close down your workspace and move into partyzone.js. From lazy loading to ...ummm.... relaxed mingling?</p>
+        <p>Bring your Big Hangout ticket or get on the guest list through the Big Hangout organisers and join the party.
+        </p>
+        <p><a [routerLink]="['/events/conferences/2019/sponsors']" routerLinkActive="router-link-active">Meet the Big Hangout sponsors</a></p>
+      </div>
+
+  </div>
+
       <!-- <div class="m-3 mw-75">
           <p><a href="https://www.meetup.com/Angular-Finland/events/257192850" title="Registration is on the Angular Finland Meetup page" class="mb-3">
             <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block"><span class="text-white">Register for the evening event</span></button>
