@@ -8,3 +8,8 @@ a {
     background-color: #CC0000;
     border: #CC0000;
 }
+.img-thumbnail {
+    width: 100%;
+    height: auto;
+    display: block;
+}

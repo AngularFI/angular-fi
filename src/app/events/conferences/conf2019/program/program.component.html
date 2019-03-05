@@ -37,7 +37,7 @@
                 <p>Event</p>
                 <ul>
                   <li>14.30 <a [routerLink]="['/events/conferences/2019/program']" fragment="day2event" class="card-link">The Big Hangout</a></li>
-                  <li>20.30 <a [routerLink]="['/events/conferences/2019/program']" fragment="party" class="card-link">After-party</a></li>
+                  <li>20.30 <a [routerLink]="['/events/conferences/2019/program']" fragment="party" class="card-link">After-party</a> at Gofore</li>
                 </ul>
                 <!-- <a href="#" class="card-link">Card link</a>
                 <a href="#" class="card-link">Another link</a> -->
@@ -122,79 +122,144 @@
         <div class="list-group-item list-group-item-action flex-column align-items-start active">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Talks</h5>
-            <small>14th March half-day</small>
+            <small>14.30, March 14th</small>
           </div>
           <p class="mb-1">Learn something new and get inspired</p>
           <small>See the big picture with leading Angular experts</small>
         </div>
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Let's Get Your Angular App To React</h5>
-            <small class="text-muted">Sani Yusuf</small>
+          <div class="row">
+            <div class="col-md-2">
+              <img class="img-fluid img-thumbnail mr-3 mw-100" src="/assets/images/events/conferences/2019/sani-yusuf-01.jpg" alt="Sani Yusuf">
+              <p class="text-muted text-center">Sani Yusuf</p>
+            </div>
+            <div class="col-md-10">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1">Let's Get Your Angular App To React</h5>
+                <p class="text-muted">15.15</p>
+              </div>
+                <p class="mb-1">Which feature is the most widespread and the most important for business success, yet so often overlooked in development projects?
+                </p>
+                <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Sani" routerLinkActive="router-link-active">More about Sani and the web's most underrated feature</a></p>
+            </div>
           </div>
-          <p class="mb-1">Which feature is the most widespread and the most important for business success, yet so often overlooked in development projects?
-          </p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Sani" routerLinkActive="router-link-active">More about Sani and the web's most underrated feature</a></p>
         </div>
 
+        
         <div class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Thinking in Web Components</h5>
-            <small class="text-muted">Akseli Virtanen</small>
+            <div class="row">
+                <div class="col-md-2">
+                  <img class="img-thumbnail mr-3 mw-100" src="/assets/images/events/conferences/2019/nadezhda-tornroos-square.jpg" alt="Nadia Törnroos">
+                  <p class="text-muted text-center">Nadia Törnroos</p>
+                </div>
+                <div class="col-md-10">
+            <div class="d-flex w-100 justify-content-between">
+              <h5 class="mb-1">Digital accessibility as a Mindset</h5>
+              <small class="text-muted">15.45</small>
+            </div>
+            <p class="mb-1">Inclusive design brings benefits for businesses and individuals - not only for people with disabilities. Basic accessibility in digital technologies can be fairly easy to achieve.
+            </p>
+            <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Nadia" routerLinkActive="router-link-active">More about Nadia and inclusive technology</a></p>
           </div>
+          </div>
+        </div>
+
+
+
+
+        <div class="list-group-item list-group-item-action flex-column align-items-start">
+          <div class="row">
+            <div class="col-md-2">
+              <img class="img-thumbnail mr-3 mw-100" src="/assets/images/events/conferences/2019/akseli_virtanen-w400.jpg" alt="Akseli Virtanen">
+              <p class="text-muted text-center">Akseli Virtanen</p>
+            </div>
+            <div class="col-md-10">
+              <div class="d-flex w-100 justify-content-between">
+               <h5 class="mb-1">Thinking in Web Components</h5>
+                <small class="text-muted">16.45</small>
+            </div>
           <p class="mb-1">Web Components have finally arrived and in Angular Elements we have the perfect toolkit. But why should you care?</p>
           <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Akseli" routerLinkActive="router-link-active">More about Akseli and web components in Angular</a></p>
         </div>
+        </div>
+        </div>
+
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="row">
+                <div class="col-md-2">
+                  <img class="img-thumbnail mw-100 mr-3" src="/assets/images/events/conferences/2019/sam-julien-square.jpg" alt="Sam Julien">
+                  <p class="text-muted text-center">Sam Julien</p>
+                </div>
+                <div class="col-md-10">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Finding the Right Path from AngularJS to Angular</h5>
-            <small class="text-muted">Sam Julien</small>
+            <p class="text-muted">17.15</p>
           </div>
           <p class="mb-1">A walk-through of the key decision points on the journey from AngularJS to modern Angular.
           </p>
           <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Sam" routerLinkActive="router-link-active">More about Sam and ngUpgrade</a></p>
         </div>
+        </div>
+        </div>
+
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="row">
+                <div class="col-md-2">
+                <img class="img-fluid img-thumbnail mr-3" src="/assets/images/events/conferences/2019/salar-kaboli-square-400.jpg" alt="Salar Kaboli">
+                  <p class="text-muted text-center">Salar Kaboli</p>
+                </div>
+                <div class="col-md-10">
+                <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Achieving performance in heavy applications with Angular and WebAssembly</h5>
+            <small class="text-muted">18.45</small>
+          </div>
+          <p class="mb-1">Let's build an application called "Game of Life" using best parts of Angular and WebAssembly. Game of Life has heavy calculations that can be too much for JavaScript to tackle alone.</p>
+          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Salar" routerLinkActive="router-link-active">More about Salar and optimising performance in heavy applications</a></p>
+        </div>
+      </div>
+    </div>
+
+
+        <div class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="row">
+                <div class="col-md-2">
+                  <img class="img-fluid img-thumbnail mr-3" src="/assets/images/events/conferences/2019/michael-hladky-square.jpg" alt="Michael Hladky">
+                  <p class="text-muted text-center">Michael Hladky</p>
+                </div>
+                <div class="col-md-10">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Manage the most dynamic user interfaces with RxJS and Angular</h5>
-            <small class="text-muted">Michael Hladky</small>
+            <small class="text-muted">19.00</small>
           </div>
           <p class="mb-1">The web has changed a lot in recent years. We're building applications that must offer highly interactive user experiences while communicating with a smart, rich-data back end or cloud computing infrastructure. RxJS brings to Angular an elegant way to meet this new demand.
           </p>
           <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Michael" routerLinkActive="router-link-active">More about Michael and how to build performant apps with RxJs</a></p>
         </div>
+      </div>
+    </div>
+
+
 
         <div class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Digital accessibility as a Mindset</h5>
-            <small class="text-muted">Nadia Törnroos</small>
-          </div>
-          <p class="mb-1">Inclusive design brings benefits for businesses and individuals - not only for people with disabilities. Basic accessibility in digital technologies can be fairly easy to achieve.
-          </p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Nadia" routerLinkActive="router-link-active">More about Nadia and inclusive technology</a></p>
-        </div>
-
-        <div class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Achieving performance in heavy applications with Angular and WebAssembly</h5>
-            <small class="text-muted">Salar Kaboli</small>
-          </div>
-          <p class="mb-1">Let's build an application called "Game of Life" using best parts of Angular and WebAssembly. Game of Life has heavy calculations that can be too much for JavaScript to tackle alone.</p>
-          <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Salar" routerLinkActive="router-link-active">More about Salar and optimising performance in heavy applications</a></p>
-        </div>
-
-        <div class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="row">
+                <div class="col-md-2">
+                <img class="img-fluid img-thumbnail mr-3" src="/assets/images/events/conferences/2019/stanimira-vlaeva-square.jpg" alt="Stanimira Vlaeva, speaking at a podium">
+                  <p class="text-muted text-center">Stanimira Vlaeva </p>
+                </div>
+                <div class="col-md-10">
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Frictionless breaking changes migration with `ng update` and Schematics</h5>
-            <small class="text-muted">Stanimira Vlaeva</small>
+            <small class="text-muted">19.30</small>
           </div>
           <p class="mb-1">When a new version hits, we all love the new features and better performance. But who loves the breaking changes? Answer: Angular CLI and ngUpdate!
           </p>
           <p><a [routerLink]="['/events/conferences/2019/speakers']" fragment="Stanimira" routerLinkActive="router-link-active">More about Stanimira and learning to love breaking changes</a></p>
         </div>
+      </div>
+    </div>
 
        <!--  <div class="list-group-item list-group-item-action flex-column align-items-start">
           <div class="d-flex w-100 justify-content-between">
@@ -212,10 +277,10 @@
       <div class="list-group-item list-group-item-action flex-column align-items-start active">
         <div class="d-flex w-100 justify-content-between">
           <h5 class="mb-1">Party</h5>
-          <small>14th March late until very late</small>
+          <small>14th March 21.00 to 24.00</small>
         </div>
-        <p class="mb-1">Big Hangout participants only</p>
-        <small>Relax with more food, music and great company at Gofore's city centre location</small>
+        <p class="mb-1">Afterparty hosted by Gofore</p>
+        <small>Big Hangout participants only</small>
       </div>
 
       <div class="list-group-item list-group-item-action flex-column align-items-start">
@@ -224,7 +289,7 @@
           <small class="text-muted">Thanks to Gofore for hosting!</small>
         </div>
         <p class="mb-1">From typescript to tequila. From lifecycle hooks to guitar hooks. From pipes to smoke-free celebration. From template expressions to dancefloor moves. Close down your workspace and move into partyzone.js. From lazy loading to ...ummm.... relaxed mingling?</p>
-        <p>Bring your Big Hangout ticket or get on the guest list through the Big Hangout organisers and join the party.
+        <p>Bring your Big Hangout ticket or get on the guest list through the Big Hangout organisers and join the party. Relax with more food, music and great company at Gofore's city centre location. Bus leaves the conference site after the final talks.
         </p>
         <p><a [routerLink]="['/events/conferences/2019/sponsors']" routerLinkActive="router-link-active">Meet the Big Hangout sponsors</a></p>
       </div>
