@@ -7,6 +7,7 @@ import { ProgramComponent } from './conferences/conf2019/program/program.compone
 import { ConfHomeComponent } from './conferences/conf2019/conf-home/conf-home.component'
 import { WorkshopsComponent } from './conferences/conf2019/workshops/workshops.component'
 import { SpeakersComponent } from './conferences/conf2019/speakers/speakers.component'
+import { VideosComponent } from './conferences/conf2019/videos/videos.component'
 import { InfoComponent } from './conferences/conf2019/info/info.component'
 import { SponsorsComponent } from './conferences/conf2019/sponsors/sponsors.component'
 
@@ -37,6 +38,8 @@ export const EventsRouting = RouterModule.forChild([
           component: SpeakersComponent},
           {path : 'info',
           component: InfoComponent},
+          {path : 'videos',
+          component: VideosComponent},
           {path : 'sponsors',
           component: SponsorsComponent}
         ]

@@ -3,16 +3,32 @@
     <div class="container">
       <img src="/assets/images/events/conferences/2019/ng-vikings-in-finland-2018-img002-widescreen.jpg" class="img-fluid">
       <p class="mt-2">Top speakers && Angular news && Community && Tips and tricks && Networking && Careers && Next big thing && Skills</p>
-      <p>We're warming up for the <a href="https://ngvikings.org" title="ngViking conference website">ng-vikings conference</a> in Denmark with our own half-day event here in Finland. </p>
+     <!--  <p>We're warming up for the <a href="https://ngvikings.org" title="ngViking conference website">ng-vikings conference</a> in Denmark with our own half-day event here in Finland. </p> -->
       <!-- <a href="https://www.meetup.com/Angular-Finland/events/257192850" title="Registration is on the Angular Finland Meetup page" class="mb-3">
         <button type="button" style="background-color: #CC0000" class="btn btn-lg btn-block"><span class="text-white">Register</span></button>
       </a>
       <p>Not able to access meetup.com? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdVnH_EOsfDVhbhYJzJQYwu7GihR4GWJ2IGqcTh2CCUSZ0qkw/viewform?usp=sf_link" target="_blank">Try another registration method.</a></p> -->
       <!-- <registration-buttons></registration-buttons> -->
-      <registration-button
+      <!-- <registration-button
         [ticketUrl]="'https://www.eventbrite.com/e/the-big-hangout-2019-tickets-56358770600'" [buttonText]="'Buy ticket'"
-      ></registration-button>
-      <div class="mt-3">
+      ></registration-button> -->
+      <div class="card">
+        <small class="text-center">video library sponsored by</small>
+        <img class="card-img-top px-4" src="\assets\images\events\conferences\2019\finitec-logo.png" alt="Finitec logo">
+        <div class="card-body">
+          <h5 class="card-title">Video library</h5>
+          <p class="card-text">Missed the event? Want to relive the talks? Just want the content?</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><iframe width="300" height="169" src="https://www.youtube.com/embed/jRHNYJqbQrI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+          <li class="list-group-item"><iframe width="300" height="169" src="https://www.youtube.com/embed/_SVepyvg3XI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></li>
+        </ul>
+        <div class="card-body">
+          <a [routerLink]="['../videos']" class="card-link">Full archive of all talks</a>
+        </div>
+      </div>
+      <!-- MAIN TEXT, pre-conference 
+        <div class="mt-3">
           <dt>
             Angular developer?
           </dt>
@@ -37,12 +53,20 @@
           <dd>
             Maybe you should get involved :) <a [routerLink]="['/contact']" title="Angular Finland organizers contact info"> Contact the Big Ha<span style="color:red;">ng</span>out team</a>. Certainly you should be at this event sharing your passion for Angular. Volunteer, make new friends and join the team.
         </dd>
-      </div>
+      </div> -->
     </div>
   </div>
   <div class="col-md-5">
     <div class="container">
-        <h6 class="text-center">Supporting the Angular community</h6>
+      <div class="row">
+        <div class="col-md-4"><a href="https://auth0.com/blog/angular-finland-big-hangout" target="_blank"><img src="\assets\images\events\conferences\2019\auth0-blog-sam-julien-big-hangout.jpg" class="img-fluid mr-1" alt="Angular Finland graphic from the Auth0 blog"></a></div>
+        <div class="col-md-8">
+            <h5>What happened at the Big Hangout?</h5>
+            <p>Speaker <a [routerLink]="['/events/conferences/2019/speakers']" fragment="Sam" routerLinkActive="router-link-active">Sam Julien</a> tells <a href="https://auth0.com/blog/angular-finland-big-hangout" target="_blank">the Big Hangout story</a> on the Auth0 blog.</p>
+        </div>
+      </div>
+
+        <h6 class="text-center mt-3">Supporting the Angular community</h6>
         <div class="card mb-2">
           <a href="https://www.frantic.com/" title="Frantic homepage" class="p-3"><img class="card-img-top" src="\assets\images\events\conferences\2019\frantic_logo.svg" alt="Frantic logo"></a>
           <div class="card-body">
@@ -110,6 +134,7 @@
         <p>
           Looking for Angular talent? <a [routerLink]="['../sponsors']" title="Share your Angular career opportunities with the community">Find out more</a> 
         </p>
-    </div>
+  </div>
+  
   </div>
 </div>
