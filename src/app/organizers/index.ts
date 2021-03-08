@@ -1,1 +1,0 @@
-export * from './organizers.module';

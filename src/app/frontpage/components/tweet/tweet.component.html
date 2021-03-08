@@ -1,6 +1,0 @@
-<div class="icon"></div>
-<div class="from"><a href="{{tweet.userLink}}">{{tweet.userName}}</a>&nbsp;<a href="https://twitter.com/search?q=%40{{tweet.userScreenName}}">@{{tweet.userScreenName}}</a>
-  <div class="date">{{tweet.created | date:'DD.MM.YYYY'}}</div>
-</div>
-<div class="message" [innerHTML]="tweet.message | linkify"></div>
-<div class="image" *ngIf="tweet.image"><img [src]="tweet.image" alt=""/></div>
